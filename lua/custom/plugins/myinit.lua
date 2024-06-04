@@ -113,4 +113,28 @@ return {
   --     vim.cmd [[do FileType]]
   --   end,
   -- },
+  -- {
+  --   'stevearc/aerial.nvim',
+  --   opts = {
+  --     on_attach = function(bufnr)
+  --       -- Jump forwards/backwards with '{' and '}'
+  --       vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', { buffer = bufnr })
+  --       vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', { buffer = bufnr })
+  --     end,
+  --   },
+  --   keys = {
+  --     { '<leader>a', '<cmd>AerialToggle!<cr>', desc = 'toggle aerial' },
+  --   },
+  -- },
+  {
+    'hedyhli/outline.nvim',
+    lazy = true,
+    cmd = { 'Outline', 'OutlineOpen' },
+    keys = { -- Example mapping to toggle outline
+      { '<leader>o', '<cmd>Outline<CR>', desc = 'Toggle outline' },
+    },
+    opts = {
+      -- Your setup opts here
+    },
+  },
 }
