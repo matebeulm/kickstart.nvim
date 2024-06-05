@@ -138,6 +138,14 @@ return {
       -- Your setup opts here
     },
   },
+  -- {
+  --   'nvimdev/lspsaga.nvim',
+  --   dependencies = {
+  --     'nvim-treesitter/nvim-treesitter', -- optional
+  --     'nvim-tree/nvim-web-devicons', -- optional
+  --   },
+  --   opts = {},
+  -- },
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {
@@ -162,5 +170,12 @@ return {
         -- javascript = { { "prettierd", "prettier" } },
       },
     },
+  },
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      local ft = require 'Comment.ft'
+      ft.dosini = { '; %s', '; %s' }
+    end,
   },
 }
