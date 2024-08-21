@@ -20,6 +20,7 @@ return {
             vim.keymap.set('n', '<leader>cd', '<cmd>RustLsp debug<cr>', { desc = 'RUST [C]ode [D]ebug' })
             vim.keymap.set('n', '<leader>ch', '<cmd>RustLsp hover actions<cr><cmd>RustLsp hover actions<cr>', { desc = 'RUST [C]ode [H]over Action' })
             vim.keymap.set('n', '<leader>co', '<cmd>RustLsp openCargo<cr>', { desc = 'RUST [C]ode [O]pen Cargo' })
+            vim.keymap.set('n', '<leader>cr', '<cmd>RustLsp runnables<cr>', { desc = 'RUST [C]ode [R]unnables' })
           end,
           default_settings = {
             -- rust-analyzer language server configuration
@@ -28,6 +29,24 @@ return {
         },
         -- DAP configuration
         dap = {},
+      }
+    end,
+  },
+  {
+    'saecki/crates.nvim',
+    tag = 'stable',
+    event = { 'BufRead Cargo.toml' },
+    config = function()
+      require('crates').setup {
+        lsp = {
+          enabled = true,
+          -- on_attach = function(client, bufnr)
+          -- the same on_attach function as for your other lsp's
+          -- end,
+          actions = true,
+          completion = true,
+          hover = true,
+        },
       }
     end,
   },
