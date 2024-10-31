@@ -609,6 +609,7 @@ require('lazy').setup({
         pbls = {
           filetypes = { 'proto' },
         },
+        cmake_language_server,
         json_ls,
         -- gopls = {},
         -- pyright = {},
@@ -703,6 +704,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        cmake = { 'cmake_format' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
