@@ -50,4 +50,16 @@ return {
       }
     end,
   },
+  {
+    'AntonVanAssche/date-time-inserter.nvim',
+    opts = {
+      date_format = 'YYYYMMDD',
+      date_separator = '-',
+      time_format = 24,
+      show_seconds = false,
+      insert_date_map = '<leader>idt',
+      insert_time_map = '<leader>itt',
+      insert_date_time_map = '<leader>idtm',
+    },
+  },
 }
