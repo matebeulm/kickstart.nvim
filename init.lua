@@ -190,6 +190,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader>tr', '<cmd>set rnu!<cr>', { desc = '[T]oggle [R]elative line numbers' })
 
+vim.keymap.set('n', '<leader>o', '<cmd>only<cr>', { desc = '[O]nly' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
