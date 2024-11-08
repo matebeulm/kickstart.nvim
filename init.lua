@@ -703,6 +703,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         cmake = { 'cmake_format' },
+        json = { 'fixjson' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
